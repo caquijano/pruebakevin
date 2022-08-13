@@ -3,7 +3,7 @@
         'localhost',
         'root',
         '',
-        'agenda-app'
+        'agenda'
     );
     
     /*if($connection){
