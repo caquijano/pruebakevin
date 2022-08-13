@@ -5,7 +5,7 @@ include('database.php');
 if(isset($_POST['id'])) {
   $id = mysqli_real_escape_string($connection, $_POST['id']);
 
-  $query = "SELECT * from contacts WHERE contact_number = {$id}";
+  $query = "SELECT * from contacts WHERE contact_id = {$id}";
 
   $result = mysqli_query($connection, $query);
   if(!$result) {
@@ -19,7 +19,7 @@ if(isset($_POST['id'])) {
         'contact_number' => $row['contact_number'],
         'contact_type' => $row['contact_type'],
         'contact_relationship' => $row['contact_relationship'],
-        'user_id' => $row['user_id'],
+        'contact_id' => $row['contact_id'],
     );
   }
   $jsonstring = json_encode($json[0]);

@@ -5,7 +5,7 @@ include('database.php');
 if(isset($_POST['id'])) {
   $id = mysqli_real_escape_string($connection, $_POST['id']);
 
-  $query = "SELECT * from task WHERE id = {$id}";
+  $query = "SELECT * from user WHERE id = {$id}";
 
   $result = mysqli_query($connection, $query);
   if(!$result) {

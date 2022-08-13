@@ -10,7 +10,6 @@
       $gender = $_POST['gender'];
       $id = $_POST['id'];
 
-      #$query = "UPDATE user SET name = 'name', lastName = '$lastName' date = '$date', gender='$gender' WHERE id = '$id'";
       $query = "UPDATE user SET name = '$name', lastName = '$lastName', date = '$date', gender='$gender' WHERE id = '$id'";
       $result = mysqli_query($connection, $query);
 

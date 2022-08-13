@@ -3,11 +3,9 @@
         'localhost',
         'root',
         '',
-        'agenda-app'
+        'agenda'
     );
-    
     /*if($connection){
     echo"database is connected";
-   }*/
-    
+   }*/   
 ?>

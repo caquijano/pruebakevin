@@ -10,7 +10,21 @@ $(function () {
 
     });
 
+    $(document).on('click', '.enlace', function () {
+       
+        $.ajax({
+           
+            success: function (response) {
+                raiz=window.location.href="agenda.html";
 
+            
+                    $(location).attr('href', raiz);
+            }
+
+
+        });
+
+    });
 
     $(document).on('click', '.dni', function () {
         let documento = window.prompt("Digite su numero de documento");
@@ -27,7 +41,8 @@ $(function () {
                 estado = users.length;
                 console.log(estado);
                 if (estado == 1) {
-                    url = 'http://localhost/prueba_desarrollador_Kevin_Tausa/Fuente/contacs.html?' + documento;
+                    raiz=window.location.href="contacs.html?";
+                    url = raiz + documento;
                     console.log(url);
                     $(location).attr('href', url);
                 } else {
@@ -37,10 +52,6 @@ $(function () {
 
 
         });
-
-
-
-
 
     });
 

@@ -15,7 +15,9 @@ if(!empty($search)){
      $json[] = array(
        'name' => $row['name'],
        'lastName'=> $row['lastName'],
-       'id' => $row['id']
+       'id' => $row['id'],
+      'date'=>$row['date'],
+      'gender' => $row['gender']     
      );
    }
    $jsonstring = json_encode($json);

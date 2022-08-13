@@ -16,11 +16,11 @@
 
     <nav class="navbar navbar-dark bg-dark">
         <!-- Navbar content -->
-        <a href="contacs.html" class="navbar-brand p-2">Gestión de Agenda</a>
+        <a href="#" class="navbar-brand p-2">Gestión de Agenda</a>
 
         <ul class="navbar-nav ml-auto">
             <form class="form-inline my-2 my-lg-0 container-fluid ">
-                <input type="text" id="search" class="form-control mr-sm-2 col-lg-8" placeholder="Buscar Contanto">
+                <input type="text" id="search" class="form-control mr-sm-2 col-lg-8" placeholder="Buscar Usuario">
                 <!--<button class="btn btn-success my-2 my-sm-0 col-lg-4" type="submit"> Buscar</button>-->
 
             </form>
@@ -32,32 +32,34 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <form id="user-form">
+                        <form class="formulario needs-validation" id="user-form">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Identificación</label>
-                                <input class="form-control" id="id" type="number">
+                                <input class="form-control" id="id" type="number" required>
+
                             </div>
 
-                            <div class="mb-3">
+                            <div class=" mb-3">
                                 <label class="form-label">Nombre</label>
-                                <input class="form-control" id="name">
+                                <input class="form-control nn " id="name" name="name" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
-                                <input class="form-control" id="lastName">
+                                <input class="form-control" id="lastName" name="lastName" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Fecha de nacimiento</label>
-                                <input class="form-control" id="date" type="date">
+                                <input class="form-control" id="date" type="date" required>
                             </div>
+                            <div class="mb-3">
+                                <label class="form-label">Genero</label>
+                                <select class="form-select" aria-label="Default select example" id="gender" required>
+                                    <option selected disabled value="">Seleccione... </option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Masculino">Masculino</option>
 
-                            <label class="form-label">Genero</label>
-                            <select class="form-select" aria-label="Default select example" id="gender">
-
-                                <option value="Femenino">Femenino</option>
-                                <option value="Masculino">Masculino</option>
-
-                            </select>
+                                </select>
+                            </div>
                             <div class="p-2 ">
 
                                 <button type="submit" class="btn btn-primary btn-block text-center p-2">
@@ -72,12 +74,23 @@
                 </div>
             </div>
             <div class="col-md-7">
-                <div class="card my-4" id="user-result">
 
-                    <div class="card-body">
-                        <ul id="container"></ul>
-                    </div>
-                </div>
+                
+                    <table class="table table-bordered border-primary" id="user-result">
+                        <thead>
+                            <tr>
+                                <td>Document</td>
+                                <td>Nombre y Apellido</td>
+                                <td>Fecha nacimiento</td>
+                                <td>Parentesco</td>
+                                <td class="">Opciones</td>
+
+
+                            </tr>
+                        <tbody id="container"></tbody>
+                        </thead>
+                    </table>
+                
 
                 <table class="table">
                     <thead>
@@ -103,11 +116,11 @@
 
 
 
-    
-    
-    
-    
-    
+
+
+
+
+
     </div>
 
 

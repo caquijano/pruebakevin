@@ -7,16 +7,15 @@
     $contact_number = $_POST['contact_number'];
     $contact_type = $_POST['contact_type'];
     $contact_relationship = $_POST['contact_relationship'];
+    $contact_id = $_POST['contact_id'];
    
+    $query = "UPDATE contacts SET contact_name = '$contact_name', contact_type = '$contact_type', contact_relationship='$contact_relationship' WHERE contact_id = '$contact_id'";
+    $result = mysqli_query($connection, $query);
 
-      #$query = "UPDATE user SET name = 'name', lastName = '$lastName' date = '$date', gender='$gender' WHERE id = '$id'";
-      $query = "UPDATE contacts SET contact_name = '$contact_name', contact_type = '$contact_type', contact_relationship='$contact_relationship' WHERE contact_number = '$contact_number'";
-      $result = mysqli_query($connection, $query);
-
-      if (!$result) {
-        die('Query Failed.');
-      }
-      echo "Task Update Successfully";  
+    if (!$result) {
+      die('Query Failed.');
+    }
+    echo "COntacto gregado satisfactoriamente..";  
   }
 
 ?>
